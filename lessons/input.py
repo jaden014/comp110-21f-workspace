@@ -1,4 +1,5 @@
 """Examples of user input and variables"""
 
-print("Wow, "+input("Who are you? ") + ", you rock!")
-print(input("Who are you? ") + " ,have a great day!")
+user_name: str = input("Who are you? ")
+print("Wow, " + user_name + ", you rock!")
+print(user_name + ", have a great day!")
