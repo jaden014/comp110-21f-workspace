@@ -1,4 +1,5 @@
 """Challenge Question #1."""
+__author__ = "730402799"
 choice: int = int(input("Enter a number: "))
 # A if choice <25
 # B if choice >=25 less than 50
