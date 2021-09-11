@@ -7,19 +7,10 @@ word: str = input("Enter a word: ")
 i: int = 0
 k: int = 0
 b: int = 0
-
-
-def ifelsechunk(a: str, b: str) -> bool:
-    if a == b:
-        return True
-    else:
-        return False
-
-
 while i < len(word):
     while k < len(word):
         if i != k:
-            if ifelsechunk(word[i], word[k]) is True:
+            if word[i] == word[k]:
                 b = 1
                 k = i = len(word)
         k = k + 1
@@ -28,6 +19,6 @@ while i < len(word):
 
 
 if b == 1:
-    print("Found Duplicate: " + str(True))
+    print("Found duplicate: " + str(True))
 else:
     print("Found duplicate: " + str(False))
