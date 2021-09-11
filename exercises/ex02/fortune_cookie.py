@@ -25,4 +25,8 @@ else:
         else:
             if i == 3:
                 print("To have been loved so deeply, even though the person who loved us is gone, will give us some protection forever.")
+<<<<<<< HEAD
 print("Now, go spread positive vibes!")
+=======
+print("Now, go spread positive vibes!")
+>>>>>>> 62bbd24ac5c640d82d2bd3f28598a793f634c07a

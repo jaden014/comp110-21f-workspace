@@ -11,4 +11,8 @@ if amount <= 0:
 else:
     while i < amount:
         i = i + 1
+<<<<<<< HEAD
     print((" " + str(beat)) * i)
+=======
+    print((" " + str(beat)) * i)
+>>>>>>> 62bbd24ac5c640d82d2bd3f28598a793f634c07a

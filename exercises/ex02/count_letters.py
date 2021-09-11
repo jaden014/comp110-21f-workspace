@@ -13,4 +13,8 @@ while i + 1 <= len(word):
         i = i + 1
     else:
         i = i + 1
+<<<<<<< HEAD
 print("Count: " + str(Count))
+=======
+print("Count: " + str(Count))
+>>>>>>> 62bbd24ac5c640d82d2bd3f28598a793f634c07a
