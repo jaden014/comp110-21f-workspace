@@ -28,6 +28,6 @@ while i < len(word):
 
 
 if b == 1:
-    print("Found Duplicate: True")
+    print("Found Duplicate: " + str(True))
 else:
-    print("Found duplicate: False")
+    print("Found duplicate: " + str(False))
