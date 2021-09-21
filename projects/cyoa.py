@@ -40,8 +40,9 @@ def choice1() -> None:
 
 def choice2(a: int) -> int:
     """Voldemort arc."""
+    global player
     SNAKE_MULTIPLIER: int = 10
-    return a * int(input("How old are you? ")) * SNAKE_MULTIPLIER
+    return a * int(input(f"How old are you, {player}? ")) * SNAKE_MULTIPLIER
     
 
 def choice3() -> None:
@@ -68,7 +69,7 @@ def pet3() -> None:
 
 
 def main() -> None:
-    """Main Gameplay"""
+    """Main Gameplay."""
     greet()
     global i
     while i == 1:
