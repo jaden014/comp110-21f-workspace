@@ -3,7 +3,7 @@
 __author__ = "730402799"
 
 player: str
-points: int 
+points: int = 0
 OWL_EMOJI: str = "\U0001F989"
 CAT_EMOJI: str = "\U0001F431"
 TOAD_EMOJI: str = "\U0001F438"
@@ -30,7 +30,7 @@ def choice1() -> None:
             print("Try again. Cats are terrible.")
             pet = int(input("Enter the number of the pet you want: "))
     if pet == 1:
-        pet1()
+        pet1()    
     if pet == 3:
         pet3()
 
@@ -55,6 +55,7 @@ def pet1() -> None:
     global points
     points = points + 1
     print("You got an adventure point!")
+    print(f"Game over. You are now ready to head of to Hogwarts. Enjoy your time there! You finished with {points} adventure points.")
 
 
 def pet3() -> None:
@@ -62,6 +63,7 @@ def pet3() -> None:
     print(f"Uninspired. Toads are lame. You lose 1 adventure point. {TOAD_EMOJI}")
     global points
     points = points - 1
+    print(f"Game over. You are now ready to head of to Hogwarts. Enjoy your time there! You finished with {points} adventure points.")
 
 
 def main() -> None:
