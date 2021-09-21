@@ -7,6 +7,7 @@ points: int = 0
 OWL_EMOJI: str = "\U0001F989"
 CAT_EMOJI: str = "\U0001F431"
 TOAD_EMOJI: str = "\U0001F438"
+SNAKE_EMOJI: str = "\U0001F40D"
 i: int = 1
 
 
@@ -30,9 +31,11 @@ def choice1() -> None:
             print("Try again. Cats are terrible.")
             pet = int(input("Enter the number of the pet you want: "))
     if pet == 1:
-        pet1()    
+        pet1()
+        
     if pet == 3:
         pet3()
+    print(f"Game over. You are now ready to head of to Hogwarts. Enjoy your time there! You finished with {points} adventure points.")
 
 
 def choice2(a: int) -> int:
@@ -55,7 +58,6 @@ def pet1() -> None:
     global points
     points = points + 1
     print("You got an adventure point!")
-    print(f"Game over. You are now ready to head of to Hogwarts. Enjoy your time there! You finished with {points} adventure points.")
 
 
 def pet3() -> None:
@@ -63,7 +65,6 @@ def pet3() -> None:
     print(f"Uninspired. Toads are lame. You lose 1 adventure point. {TOAD_EMOJI}")
     global points
     points = points - 1
-    print(f"Game over. You are now ready to head of to Hogwarts. Enjoy your time there! You finished with {points} adventure points.")
 
 
 def main() -> None:
@@ -80,7 +81,7 @@ def main() -> None:
             global points
             points = points + 2
             n: int = choice2(points)
-            print(f"Oh no! {n} snakes have suddenly surrounded you in Diagon Alley! You can either: 1. run, or 2. try and talk to them.")
+            print(f"Oh no! {n} snakes {SNAKE_EMOJI * n} have suddenly surrounded you in Diagon Alley! You can either: 1. run, or 2. try and talk to them.")
             Snake_fight: int = int(input("Enter the number of the option you chose: "))
             if Snake_fight == 1:
                 print(f"Solid decision. I would do that too if I were surrounded by {n} snakes. You get an adventure point by virtue of surviving this harrowing experience.")
@@ -90,14 +91,14 @@ def main() -> None:
                 from random import randint
                 K = randint(-1, 2)
                 if K >= 1:
-                    print(f"Oh no, looks like you're a Parselmouth. You are almost guaranteed to be evil. You get {n} adventure points cause you'd probably kill me if I don't. I'm getting the hell out of here, peace out.")
+                    print(f"Oh no, it worked. Looks like you're a Parselmouth. You are almost guaranteed to be evil. I'll give you {n} adventure points cause you'd probably kill me if I don't. I'm getting the hell out of here, peace out.")
                     points = points + n
                     print(f"You finished with {points} adventure points. Enjoy your 7 years at Hogwarts!")
                 else:
                     print(f"Ha, moron. You died, game over. You finished with {points} adventure points.")
         if choice == 3:
             choice3()
-        i = int(input("Would you like to continue exploring the other branches of the game? You can keep your adventure points until you're finished. Enter 1 if you want to keep playing. Enter 0 if you want to quit: "))
+        i = int(input("Would you like to continue exploring the other branches of the game? You can keep gaining more adventure points until you're finished. Enter 1 if you want to keep playing. Enter 0 if you want to quit: "))
     print(f"Thanks for playing! You finished with {points} adventure ponits.")
 
 
