@@ -4,15 +4,19 @@ __author__ = "730402799"
 
 
 def all(a: list[int], b: int) -> bool:
+    """Tests if every int in a list is the given int."""
     i: int = 0
+    if len(a) == 0:
+        return False
     while i < len(a):
-        if b == a[i]:
-            return True
+        if b != a[i]:
+            return False
         i += 1
-    return False
+    return True
 
 
 def is_equal(a: list[int], b: list[int]) -> bool:
+    """Tests if 2 lists are deeply equal."""
     i: int = 0
     if len(a) != len(b):
         return False
@@ -26,16 +30,13 @@ def is_equal(a: list[int], b: list[int]) -> bool:
 
 
 def max(a: list[int]) -> int:
+    """Finds the maximum value of a list of ints."""
     if len(a) == 0:
-        raise ValueError("max() arg is an empty List.")
+        raise ValueError("max() arg is an empty List")
     i: int = 0
     k: int = 0
     while i < len(a):
         if a[i] > k or k == 0:                
             k = a[i]
         i += 1
-        if i == len(a):
-            return k
-
-
-print(max([]))
+    return k
