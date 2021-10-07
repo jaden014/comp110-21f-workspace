@@ -24,7 +24,7 @@ def sub(a: list[int], j: int, k: int) -> list[int]:
     if j < 0:
         i = 0
     if k > len(a):
-        k = len(a) - 1
+        k = len(a)
     while j <= i and i < k:
         sublist.append(a[i])
         i += 1

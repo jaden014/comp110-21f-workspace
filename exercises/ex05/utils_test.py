@@ -54,7 +54,7 @@ def test_sub_one_int() -> None:
     a: list[int] = [1]
     j: int = -1
     k: int = 2
-    assert sub(a, j, k) == []
+    assert sub(a, j, k) == [1]
 
 
 def test_concat_empty_lists() -> None:
