@@ -12,16 +12,16 @@ def test_invert_empty_dict() -> None:
     assert invert(words) == {}
 
 
-def test_invert_same_key() -> None:
+def test_invert_random_test() -> None:
     """Random Test."""
-    words: dict[str, str] = {"Hello": "Hola", "One": "No", "Hell": "Bonjour"}
-    assert invert(words) == {"Hell": "Bonjour", "One": "No", "Hello": "Hola"}
+    words: dict[str, str] = {"A": "b"}
+    assert invert(words) == {"b": "A"}
 
 
-def test_invert_same_key1() -> None:
+def test_invert_another_random_test() -> None:
     """Another random Test."""
-    words: dict[str, str] = {"A": "B", "B": "D", "C": "B"}
-    assert invert(words) == {"C": "B", "B": "D", "A": "B"}
+    words: dict[str, str] = {"A": "B", "C": "D", "E": "F"}
+    assert invert(words) == {"B": "A", "D": "C", "F": "E"}
 
 
 def test_favorite_color_empty_dictionary() -> None:
@@ -43,15 +43,18 @@ def test_favorite_color_another_random_case() -> None:
 
 
 def test_count_empty_list() -> None:
+    """Tests for empty list."""
     xs: list[str] = []
     assert count(xs) == {}
 
 
 def test_count_random_case() -> None:
+    """Tests random case."""
     xs: list[str] = ["tre", "tre", "ert"]
     assert count(xs) == {"tre": 2, "ert": 1}
 
 
 def test_count_random_case_2() -> None:
+    """Tests another random case."""
     xs: list[str] = ["tre", "tre", "ert", "ert"]
     assert count(xs) == {"tre": 2, "ert": 2}
