@@ -28,6 +28,7 @@ def favorite_color(names_n_colors: dict[str, str]) -> str:
     for each in colors:
         if count == colors[each]:
             return each
+    return ""
 
 
 def count(xs: list[str]) -> dict[str, int]:
