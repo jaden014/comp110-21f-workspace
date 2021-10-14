@@ -19,7 +19,7 @@ def favorite_color(names_n_colors: dict[str, str]) -> str:
     colors: dict[str, int] = {}
     count: int = 0
     for name in names_n_colors:
-        colors[names_n_colors[name]] = 1
+        colors[names_n_colors[name]] = 0
     for name in names_n_colors:
         colors[names_n_colors[name]] += 1
     for each in colors:
