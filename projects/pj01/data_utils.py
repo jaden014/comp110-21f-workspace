@@ -40,8 +40,9 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
 def head(column_table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
     """Produce a new table with only the first N rows of data."""
-    if N > len(column_table):
-        N = len(column_table)
+    for x in column_table:
+        if N > len(column_table[x]):
+            N = len(column_table[x])
     shorter_table: dict[str, list[str]] = {}
     for x in column_table:
         i: int = 0
@@ -86,4 +87,12 @@ def count(values: list[str]) -> dict[str, int]:
             result[x] += 1
         else:
             result[x] = 1
+    return result
+
+
+def integerify(counts: dict[str, int]) -> dict[int, int]:
+    """Converts keys of a str-int dictionary from type str to type int."""
+    result: dict[int, int] = {}
+    for x in counts:
+        result[int(x)] = counts[x]
     return result
